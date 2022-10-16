@@ -4,8 +4,8 @@
 MCP_CAN CAN(10);
 
 void setup() {
-    Serial.begin(9600);
-    if (CAN.begin(MCP_ANY, CAN_250KBPS, MCP_8MHZ) == CAN_OK) {
+    Serial.begin(115200);
+    if (CAN.begin(MCP_ANY, CAN_500KBPS, MCP_16MHZ) == CAN_OK) {
         CAN.setMode(MCP_NORMAL);
     } else {
         Serial.println("Can init fail");
